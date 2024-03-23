@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+.back{
+	height:100%;
+	width:100%;
+ background: rgb(116,179,174);
+background: linear-gradient(45deg, rgba(116,179,174,1) 35%, rgba(203,167,152,1) 100%); 
+}

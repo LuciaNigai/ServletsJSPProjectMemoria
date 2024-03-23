@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Quattrocento Sans', sans-serif;
+	/*outline: auto;*/
+	color: rgb(60, 95, 96);
+}
+
+body{
+ background: rgb(116,179,174);
+background: linear-gradient(45deg, rgb(116,179,174), rgb(203,167,152)); 
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height of the section to 100% of the viewport height */
+}
+
+@media (max-width: 1100px) {
+  .image-books {
+    display: none;
+  }
+    .form-login {
+    border-radius: 20px !important;
+    }
+}
+
+@media(max-height:450px){
+	.form-login p{
+	margin-bottom: 10px !important;
+	margin-top:10px !important;
+	}
+	.form-login {
+	height:340px !important;
+	}
+}
+
+@media(max-width:500px){
+	  .form-login {
+    width: 300px !important;
+  }
+}
+
+
+.image-books{
+	background-color: white;
+	padding:20px 10px;
+	height:450px;
+	width:450px;
+	border-radius: 20px 0 0 20px;
+}
+
+.image-books img{
+	height:90%;
+	width:90%;
+}
+
+.form-login {
+  border-radius: 0 20px 20px 0;
+  padding: 20px 20px; /* Adjusted padding for better appearance */
+  background-color: white;
+  height:450px;
+  width:450px;
+  text-align: center; /* Center the contents horizontally */
+}
+
+.form-login p{
+	font-size: 30px;
+	color:rgb(203, 167, 152);
+	margin-top:20px;
+	margin-bottom:60px;
+	font-weight:bold;
+}
+
+input[type=text]{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+     border: 1px solid rgba(60, 95, 96, 0.5);
+     color: rgb(60, 95, 96);
+     font-size:15px;
+     width: 80%;;
+     height: 40px;
+     padding-left: 10px;
+    }
+input[type=text]:focus {
+     outline: none;
+     border: 1px solid rgb(60, 95, 96);
+     color: rgb(60, 95, 96);
+}
+
+input[type=password]{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(60, 95, 96, 0.5);
+    color: rgb(60, 95, 96);
+    font-size:15px;
+    width: 80%;
+    height: 40px;
+    padding-left: 10px;
+    margin: 20px;
+}
+
+input[type=password]:focus {
+    outline: none;
+    border: 1px solid rgb(60, 95, 96);
+    color: rgb(60, 95, 96);
+}
+
+input[type=submit]{
+	background-color: rgba(116, 179, 174,0.4);
+	padding:10px 20px;
+	border:1px solid rgba(60, 95, 96, 0.5);
+	border-radius: 10px;
+	margin: 30px;
+}
+
+

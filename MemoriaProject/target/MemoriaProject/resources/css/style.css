@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Quattrocento+Sans&display=swap')
+	;
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Quattrocento Sans', sans-serif;
+	/*outline: auto;*/
+	color: rgb(60, 95, 96);
+}
+
+
+/*-----------------------Header Style begin------------------*/
+#header{
+	background-color: transparent;
+    position: absolute;
+    width: 100%;
+}
+
+.header-container {
+    height: 80px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px 0 15px;
+}
+
+.logo {
+    box-sizing: border-box;
+    font-size:25px; 
+    border:solid 1px rgb(60, 95, 96); 
+    border-radius:20px; 
+    padding:5px;
+    margin-top: 0px;
+}
+
+.searchbar {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-nav a {
+    color:rgb(60, 95, 96);
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    text-decoration: underline solid rgb(203, 167, 152) 3px;
+}
+
+.profile-login{
+	display:flex;
+	align-items:center;
+	gap:30px;
+}
+
+.profile-login button {
+  padding: 5px;
+  border: 1px solid rgb(60, 95, 96);
+  border-radius: 20px;
+  font-size: 15px;
+  background-color: transparent;
+  transition: box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+.profile-login button:hover {
+  box-shadow: 0 0 10px rgba(60, 95, 96, 0.3); /* Add shadow on hover */
+  background-color: rgba(203, 167, 152,0.7);
+  cursor: pointer;
+}
+
+
+input[type=text]{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+     border: 1px solid #000000;
+     color: rgb(60, 95, 96);
+     width: 250px;
+     height: 30px;
+     padding-left: 10px;
+     background-color: transparent;
+    }
+input[type=text]:focus {
+     outline: none;
+     border: 1px solid rgb(60, 95, 96);
+     color: rgb(60, 95, 96);
+}
+
+/*-----------------------Header Style end------------------*/
+
+/*-------------------------Main page style begin--------------*/
+
+.site-image{
+	background-image: url("../images/walper2.jpg");
+	height:100%;
+	width:100%;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 50px;
+}
+
+/*---------------Add new section begin----------*/
+
+.add-new{
+	margin:auto;
+	text-align:center;
+	margin-bottom:100px;
+}
+
+.row {
+  max-width: 70%;
+  margin: 5% auto; /* shorthand for top/bottom margin 5% and horizontal margin auto */
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center the items horizontally */
+  justify-content: space-between;
+}
+
+
+.add-elem {
+    border-radius: 20px;
+    padding:5px 5px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Add position relative for positioning absolute child */
+	margin:10px;
+}
+
+.add-elem p {
+    display: none; /* Hide the paragraph by default */
+    position: absolute; /* Position the paragraph absolutely */
+    bottom: 0px; /* Adjust as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    transition: 0.5s; /* Transition effect */
+    color:transparent;
+}
+
+.add-elem:hover{
+	background-color:rgba(203, 167, 152,0.3);
+	box-shadow: 0 0 20px 0px rgba(203, 167, 152,0.2);
+}
+
+.add-elem:hover p {
+    display: block; /* Display paragraph on hover */
+    bottom: 60px; /* Adjust as needed */
+    color:  rgb(60, 95, 96);
+    font-size:20px;
+    font-style: bold;
+}
+
+
+.add-elem i,
+    .add-elem p {
+        display: inline-block; /* or inline */
+        vertical-align: middle; /* to vertically align them */
+    }
+
+@media(max-width:1000px){
+	.row{
+	flex-direction: column;
+	}
+}
+
+/*---------------Add new section end----------*/
+
+/*-------------------------Main page style end--------------*/
+
+
+
