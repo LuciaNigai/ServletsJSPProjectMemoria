@@ -2,6 +2,8 @@
  * 
  */
 
+var ctx ="http://localhost:8080/MemoriaProject/";
+
 function addFolder() {
 	// Perform the desired action here, such as navigating to a new page
 	window.location.href = ctx + "/add-folder";
@@ -20,6 +22,11 @@ function addCourse() {
 function login() {
 	// Perform the desired action here, such as navigating to a new page
 	window.location.href = ctx + "/login";
+}
+
+function register() {
+	// Perform the desired action here, such as navigating to a new page
+	window.location.href = ctx + "/register";
 }
 
 

@@ -17,7 +17,7 @@ body{
 background: linear-gradient(45deg, rgb(116,179,174), rgb(203,167,152)); 
 }
 
-.login-form {
+.login-form, .register-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,23 +28,23 @@ background: linear-gradient(45deg, rgb(116,179,174), rgb(203,167,152));
   .image-books {
     display: none;
   }
-    .form-login {
+    .form-login, .form-register {
     border-radius: 20px !important;
     }
 }
 
 @media(max-height:450px){
-	.form-login p{
+	.form-login p, .form-register p{
 	margin-bottom: 10px !important;
 	margin-top:10px !important;
 	}
-	.form-login {
+	.form-login, .form-register {
 	height:340px !important;
 	}
 }
 
 @media(max-width:500px){
-	  .form-login {
+	  .form-login, .form-register{
     width: 300px !important;
   }
 }
@@ -63,7 +63,7 @@ background: linear-gradient(45deg, rgb(116,179,174), rgb(203,167,152));
 	width:90%;
 }
 
-.form-login {
+.form-login, .form-register {
   border-radius: 0 20px 20px 0;
   padding: 20px 20px; /* Adjusted padding for better appearance */
   background-color: white;
@@ -72,15 +72,16 @@ background: linear-gradient(45deg, rgb(116,179,174), rgb(203,167,152));
   text-align: center; /* Center the contents horizontally */
 }
 
-.form-login p{
+.form-login p, .form-register p{
 	font-size: 30px;
 	color:rgb(203, 167, 152);
 	margin-top:20px;
-	margin-bottom:60px;
+	margin-bottom:30px;
 	font-weight:bold;
 }
 
-input[type=text]{
+input[type=text],
+input[type=email]{
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
      border-radius: 20px;
@@ -91,6 +92,11 @@ input[type=text]{
      height: 40px;
      padding-left: 10px;
     }
+    
+input[name="userName"]{
+	margin-bottom: 20px;
+}
+    
 input[type=text]:focus {
      outline: none;
      border: 1px solid rgb(60, 95, 96);
@@ -107,7 +113,13 @@ input[type=password]{
     width: 80%;
     height: 40px;
     padding-left: 10px;
-    margin: 20px;
+}
+input[name="userPassword"]{
+	    margin: 20px;
+}
+
+input[name="userPasswordRepeat"]{
+	margin-bottom: 20px;
 }
 
 input[type=password]:focus {
