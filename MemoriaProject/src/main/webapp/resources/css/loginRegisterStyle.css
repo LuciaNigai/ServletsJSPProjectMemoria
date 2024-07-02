@@ -13,8 +13,8 @@
 }
 
 body{
- background: rgb(116,179,174);
-background: linear-gradient(45deg, rgb(116,179,174), rgb(203,167,152)); 
+ background: rgb(27, 41, 41);
+background: linear-gradient(45deg,rgb(27, 41, 41), rgb(255, 255, 255)); 
 }
 
 .login-form, .register-form {
@@ -52,15 +52,15 @@ background: linear-gradient(45deg, rgb(116,179,174), rgb(203,167,152));
 
 .image-books{
 	background-color: white;
-	padding:20px 10px;
+	padding:20px 0px;
 	height:450px;
 	width:450px;
 	border-radius: 20px 0 0 20px;
 }
 
-.image-books img{
-	height:90%;
-	width:90%;
+.image-books img {
+    height: 100%;
+    width: 100%;
 }
 
 .form-login, .form-register {
@@ -129,11 +129,17 @@ input[type=password]:focus {
 }
 
 input[type=submit]{
-	background-color: rgba(116, 179, 174,0.4);
+	background-color: transparent;
 	padding:10px 20px;
 	border:1px solid rgba(60, 95, 96, 0.5);
 	border-radius: 10px;
 	margin: 30px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover{
+	border-color: rgb(203, 167, 152);
+	color: rgb(203, 167, 152);
 }
 
 

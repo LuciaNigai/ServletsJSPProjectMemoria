@@ -16,6 +16,9 @@
 	color: rgb(60, 95, 96);
 }
 
+body{
+	min-height: 100vh;
+}
 
 /*-----------------------Header Style begin------------------*/
 #header{
@@ -47,6 +50,7 @@
     padding: 20px;
     border-radius: 10px;
 }
+
 
 .main-nav {
     display: flex;
@@ -80,7 +84,8 @@
 
 .profile-login button:hover {
   box-shadow: 0 0 10px rgba(60, 95, 96, 0.3); /* Add shadow on hover */
-  background-color: rgba(203, 167, 152,0.7);
+  border: 1px solid rgb(203, 167, 152);
+  color: rgb(203, 167, 152);
   cursor: pointer;
 }
 
@@ -89,7 +94,7 @@
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
      border-radius: 20px;
-     border: 1px solid #000000;
+     border: 1px solid rgb(60, 95, 96);
      color: rgb(60, 95, 96);
      width: 250px;
      height: 35px;
@@ -99,8 +104,11 @@
     }
 .searchbar input[type=text]:focus {
      outline: none;
-     border: 1px solid rgb(60, 95, 96);
-     color: rgb(60, 95, 96);
+     border: 1px solid rgb(203, 167, 152);
+}
+
+.searchbar input[type=text]:active{
+	border: 1px solid rgb(203, 167, 152);
 }
 
 /*-----------------------Header Style end------------------*/
@@ -108,7 +116,7 @@
 /*-------------------------Main page style begin--------------*/
 
 .site-image{
-	background-image: url("../images/walper2.jpg");
+	background-image: url("../images/website2.jpg");
 	height:100%;
 	width:100%;
 	background-size: cover;
@@ -119,6 +127,15 @@
 	margin-bottom: 50px;
 }
 
+.site-image h2{
+	color:  white;
+
+	}
+
+.center-img{
+	background-color:rgba(0,0,0,0.3);
+}
+
 /*---------------Add new and Practice sections begin----------*/
 
 .add-new{
@@ -126,6 +143,10 @@
 	text-align:center;
 	margin-bottom:100px;
 	max-width: 1500px;
+}
+
+.add-new h2{
+	color:  rgb(203, 167, 152);
 }
 
 .row {
@@ -169,7 +190,7 @@
 .add-elem:hover p {
     display: block; /* Display paragraph on hover */
     bottom: 60px; /* Adjust as needed */
-    color:  rgb(60, 95, 96);
+    color:  rgb(203, 167, 152);
     font-size:20px;
     font-style: bold;
 }
@@ -184,11 +205,11 @@
 @media(max-width:1000px){
 	
 	.add-new{
-	max-width: 600px !important;
+	max-width: 800px !important;
 	}
 	.row{
 	flex-direction: column;
-	width:70%;
+	width:80%;
 	}
 }
 
@@ -284,21 +305,198 @@
 
 .add-new-card-form .add-button input[type=submit]{
   padding: 5px;
-  border: 1px solid rgb(60, 95, 96);
+  border: 1px solid rgba(60, 95, 96, 0.4);
   border-radius: 20px;
   width:80px;
   height:40px;
   font-size: 15px;
-  background-color: rgba(116, 179, 174, 0.3);
-  transition: box-shadow 0.3s; /* Add transition for smooth effect */
+  background-color: transparent;
+  transition:0.3s; /* Add transition for smooth effect */
 }
 
-.add-new-card-form .add-button input[type=submit]:focus {
-  box-shadow: 0 0 10px rgba(60, 95, 96, 0.3); /* Add shadow on hover */
-  background-color: rgba(203, 167, 152,0.7);
+.add-new-card-form .add-button input[type=submit]:hover {
+  border: 1px solid rgb(203, 167, 152);
+  color: rgb(203, 167, 152); 
   cursor: pointer;
 }
 
 /*----------------------Add card page style end--------------*/
 
+/*------------------------Add course popup window*/
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.modal-content button {
+  padding: 5px;
+  margin-left: 200px;
+  margin-right: 200px;
+  border: 1px solid rgb(60, 95, 96);
+  border-radius: 20px;
+  font-size: 15px;
+  background-color: transparent;
+  transition: box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+.modal-content button:hover {
+  box-shadow: 0 0 10px rgba(60, 95, 96, 0.3); /* Add shadow on hover */
+  border: 1px solid rgb(203, 167, 152);
+  color: rgb(203, 167, 152);
+  cursor: pointer;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Simple form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input {
+    margin-bottom: 10px;
+}
+
+#addCourseForm input[type=text]{
+	padding: 5px;
+	font-size:15px;
+	border: 1px solid rgb(60, 95, 96);
+    border-radius: 20px;
+}
+
+/*--------------------------Add folder popup-------------------------*/
+/* Modal styling */
+.modalFolder {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content-folder {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.modal-content-folder button {
+  padding: 5px;
+  margin-left: 200px;
+  margin-right: 200px;
+  border: 1px solid rgb(60, 95, 96);
+  border-radius: 20px;
+  font-size: 15px;
+  background-color: transparent;
+  transition: box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+.modal-content-folder button:hover {
+  box-shadow: 0 0 10px rgba(60, 95, 96, 0.3); /* Add shadow on hover */
+  border: 1px solid rgb(203, 167, 152);
+  color: rgb(203, 167, 152);
+  cursor: pointer;
+}
+
+/* Close button */
+.close-folder {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-folder:hover,
+.close-folder:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+label, input {
+    margin-bottom: 10px;
+}
+
+#addFolderForm input[type=text]{
+	padding: 10px;
+	font-size:15px;
+	border: 1px solid rgb(60, 95, 96);
+    border-radius: 20px;
+}
+
+.modal-content-folder select {
+	padding: 10px;
+	font-size:15px;
+	border: 1px solid rgb(60, 95, 96);
+    border-radius: 20px;
+	background-color: transparent;
+	margin-bottom: 10px;
+
+    /* For non-IE browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+   
+    /* Custom arrow styles */
+    background-image: url('../images/dropdown-arrow.svg'); /* Replace 'path/to/arrow-icon.svg' with the actual path to your arrow icon */
+    background-position: right 15px center; /* Adjust the position of the arrow */
+    background-repeat: no-repeat;
+    background-color: white;
+   	color: rgb(60, 95, 96);
+    background-size: 20px 20px;
+}
+
+.modal-content-folder select::-ms-expand {
+    display: none; /* Hide the default arrow in IE */
+}
+
+.courses-select {
+	background-color: white;
+}
 

@@ -12,7 +12,7 @@
 <body>
 	<section class="register-form" id="register">
 		<div class="image-books">
-			<img src="<%=request.getContextPath()%>/resources/images/login.jpg">
+			<img src="<%=request.getContextPath()%>/resources/images/login2.jpg">
 		</div>
 		<div class="form-register">
 			<p>REGISTER</p>
@@ -21,13 +21,13 @@
 				<br>
 			</div>
 			<form action="<%=request.getContextPath()%>/register" method="post">
-				<input type="text" name="userName" placeholder="Enter name">
+				<input type="text" name="userName" placeholder="Enter name" required="required">
 				<br> 
-				<input type="email" name="userEmail" placeholder="Enter email">
+				<input type="email" name="userEmail" placeholder="Enter email" required="required">
 				<br> 
-				<input type="password" name="userPassword" placeholder="Enter password"> 
+				<input type="password" name="userPassword" placeholder="Enter password" required="required"> 
 				<br> 
-				<input type="password" name="userPasswordRepeat" placeholder="Repeat password"> 
+				<input type="password" name="userPasswordRepeat" placeholder="Repeat password" required="required"> 
 				<br> 
 				<input type="checkbox" name="ShowPassword" id="show"> 
 				<label for="show">Show password</label> 

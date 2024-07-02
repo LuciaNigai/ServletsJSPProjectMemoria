@@ -15,7 +15,7 @@ public class DBconnection {
 
     private DBconnection() {
         try {
-            this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/memoria_db", "root", "");
+            this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/memoriadb", "root", "HelloAdmin23");
         } catch (SQLException e) {
             e.printStackTrace();
         }

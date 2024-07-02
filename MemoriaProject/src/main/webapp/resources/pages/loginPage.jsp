@@ -12,7 +12,7 @@
 <body>
 	<section class="login-form" id="login1">
 		<div class="image-books">
-			<img src="<%=request.getContextPath()%>/resources/images/login.jpg">
+			<img src="<%=request.getContextPath()%>/resources/images/login2.jpg">
 		</div>
 		<div class="form-login">
 			<p>LOGIN</p>
