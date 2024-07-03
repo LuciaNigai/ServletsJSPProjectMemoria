@@ -7,11 +7,13 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.security.crypto.bcrypt.BCrypt;
@@ -62,7 +64,7 @@ public class Login extends HttpServlet {
 					HttpSession session = req.getSession(false);
 					session.setAttribute("email", email);
 					session.setAttribute("name", name);
-					
+//					getting user courses
 					String coursesQuery = "select course_name from course where user_id=(select user_id from users where email=?);";
 					PreparedStatement coursesStmt = DBcon.getConnection().prepareStatement(coursesQuery);
 					coursesStmt.setString(1, email);
@@ -71,7 +73,26 @@ public class Login extends HttpServlet {
 					while(coursesSet.next()) {
 						courses.add(coursesSet.getString("course_name"));
 					}
+					
+//					getting user Folders
+					CallableStatement statement = DBcon.getConnection().prepareCall("{CALL getFolders(?)}");
+					statement.setString(1, email);
+					statement.execute();
+					ResultSet foldersResultSet = statement.getResultSet();
+					HashMap<String, List<String>> folders = new HashMap<String, List<String>>();
+					while(foldersResultSet.next()) {
+						if(folders.containsKey(foldersResultSet.getString("course_name"))) {
+							folders.get(foldersResultSet.getString("course_name")).add(foldersResultSet.getString("folder_name"));
+						}
+						else {
+							List<String> foldersList = new ArrayList<>();
+							foldersList.add(foldersResultSet.getString("folder_name"));
+							folders.put(foldersResultSet.getString("course_name"), foldersList);
+						}
+					}
+					
 					session.setAttribute("courses", courses);
+					session.setAttribute("folders", folders);
 					resp.sendRedirect("index.jsp");
 				}
 				else {

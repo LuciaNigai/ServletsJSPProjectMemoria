@@ -74,3 +74,6 @@ function register() {
                 modalFolder.style.display = "none";
             }
         }
+
+        
+// checking current course   

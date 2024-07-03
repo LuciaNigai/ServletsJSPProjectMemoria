@@ -5,11 +5,13 @@
 <head>
 
 <!-- Styles -->
-<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
 <!-- JS files -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="resources/javascript/script.js"></script>
-
+<script type="text/javascript" src="../javascript/script.js" defer></script>
+<%@ page import="java.util.List"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="java.util.HashMap" %>
 <meta charset="UTF-8">
 <title>New Card</title>
 </head>
@@ -21,26 +23,38 @@
 			<form action="new-card" class="add-new-card-form">
 				<div class="type">
 					<label for="type">Card Type</label> <select id="type" name="type">
-						<option value="multi_select">MultiSelect</option>
 						<option value="flash_card_front">Flash Card(Front)</option>
 						<option value="flash-card_fron_back">Flash
 							Card(Front/Back)</option>
 					</select>
 				</div>
 				<div class="course">
-					<label id="course">Course name</label> <select id="course"
-						name="course">
-						<option value="">None</option>
-						<option value="Course1">Course1</option>
-						<option value="Course2">Course2</option>
+					<label id="course">Course name</label> 
+					<select id="course" name="course">
+					<%if(session.getAttribute("courses")!=null){
+						List<String> courses = (ArrayList<String>)session.getAttribute("courses");
+						if(courses!=null){
+							for(String course : courses){
+							
+						%>
+					<option class="courses-select" value="<%= course %>"><%= course %></option>
+					<%} }
+							
+								} %>
 					</select>
 				</div>
 				<div class="folder">
 					<label id="folder">Folder name</label> <select id="folder"
 						name="folder">
-						<option value="">None</option>
-						<option value="Folder1">Folder1</option>
-						<option value="Folder2">Folder2</option>
+					<%if(session.getAttribute("folders")!=null){
+					    HashMap<String, List<String>> folders = (HashMap<String, List<String>>) session.getAttribute("folders");
+					    if (folders != null) {
+					        for (List<String> folderList : folders.values()) {
+					            if (folderList != null) {
+					                for (String folder : folderList) {
+					%>
+					<option class="courses-select" value="<%= folder %>"><%= folder %></option>
+					<% }}}}}%>
 					</select>
 				</div>
 				<div class="front">

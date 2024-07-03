@@ -24,7 +24,7 @@ public class AddCard extends HttpServlet {
 			session.setAttribute("error", "You should be logged in.");
 			resp.sendRedirect("index.jsp");
 		} else {
-	        resp.sendRedirect("/resources/pages/addCard.jsp");
+	        resp.sendRedirect("resources/pages/addCard.jsp");
 		}
     }
 

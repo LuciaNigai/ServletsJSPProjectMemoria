@@ -8,6 +8,12 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.sql.CallableStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Servlet implementation class AddFolder
@@ -25,7 +31,42 @@ public class AddFolder extends HttpServlet {
 			session.setAttribute("error", "You should be logged in.");
 			resp.sendRedirect("index.jsp");
 		} else {
-	        resp.sendRedirect("/resources/pages/addFolder.jsp");
+			String course = req.getParameter("courses");
+			String folder = req.getParameter("folder");
+			DBconnection conn = DBconnection.getInstance();
+			try {
+				CallableStatement statement = conn.getConnection().prepareCall("{CALL addFolder(?,?,?)}");
+				statement.setString(1, course);
+				statement.setString(2, folder);
+				statement.setString(3, session.getAttribute("email").toString());
+				statement.execute();
+				ResultSet resultSet = statement.getResultSet();
+				if (resultSet.next()) {
+				    String message = resultSet.getString("message");
+				    
+				    if (message != null && message.equals("Folder added succesfully")) {
+				        HashMap<String,String> folders = (HashMap<String, String>) session.getAttribute("folders");
+				        if(folders==null) {
+				        	folders = new HashMap<String, String>();
+				        }
+				        
+				        folders.put(course, folder);
+				    	session.setAttribute("folders", folders);
+				        session.setAttribute("error", "Course added");
+
+				        resp.sendRedirect("index.jsp");
+				    } else {
+				        session.setAttribute("error", message);
+				        resp.sendRedirect("index.jsp");
+				    }
+				} else {
+				    session.setAttribute("error", "Unknown error occured");
+				    resp.sendRedirect("index.jsp");
+				}
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
     }
 

@@ -1,6 +1,11 @@
 import java.io.IOException;
 import java.sql.CallableStatement;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
@@ -37,6 +42,30 @@ public class Register extends HttpServlet {
 			statement.setString(3, hashed);
 			statement.executeUpdate();
 			HttpSession session=req.getSession();
+			
+//			getting user courses
+			String coursesQuery = "select course_name from course where user_id=(select user_id from users where email=?);";
+			PreparedStatement coursesStmt = conn.getConnection().prepareStatement(coursesQuery);
+			coursesStmt.setString(1, email);
+			ResultSet coursesSet = coursesStmt.executeQuery();
+			List<String> courses = new ArrayList<>();
+			while(coursesSet.next()) {
+				courses.add(coursesSet.getString("course_name"));
+			}
+			
+//			getting user Folders
+			CallableStatement folderStat = conn.getConnection().prepareCall("{CALL getFolders(?)}");
+			folderStat.setString(1, email);
+			folderStat.execute();
+			ResultSet foldersResultSet = folderStat.getResultSet();
+			HashMap<String, String> folders = new HashMap<String, String>();
+			while(foldersResultSet.next()) {
+				folders.put(foldersResultSet.getString("course_name"), foldersResultSet.getString("folder_name"));
+			}
+			
+			session.setAttribute("courses", courses);
+			session.setAttribute("folders", folders);
+			
 			session.setAttribute("name", name);
 			session.setAttribute("email", email);
 		} catch (SQLException e) {

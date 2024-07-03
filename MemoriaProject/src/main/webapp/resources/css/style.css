@@ -8,7 +8,7 @@
 	url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Quattrocento+Sans&display=swap')
 	;
 
-*{
+* {
 	margin: 0;
 	padding: 0;
 	font-family: 'Quattrocento Sans', sans-serif;
@@ -16,109 +16,108 @@
 	color: rgb(60, 95, 96);
 }
 
-body{
+body {
 	min-height: 100vh;
 }
 
 /*-----------------------Header Style begin------------------*/
-#header{
+#header {
 	background-color: transparent;
-    position: absolute;
-    width: 100%;
+	position: absolute;
+	width: 100%;
 }
 
 .header-container {
-    height: 80px;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px 0 15px;
+	height: 80px;
+	max-width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 15px 0 15px;
 }
 
 .logo {
-    box-sizing: border-box;
-    padding:5px;
-    margin-top: 0px;
+	box-sizing: border-box;
+	padding: 5px;
+	margin-top: 0px;
 }
 
-.logo:hover{
+.logo:hover {
 	cursor: pointer;
 }
 
 .searchbar {
-    padding: 20px;
-    border-radius: 10px;
+	padding: 20px;
+	border-radius: 10px;
 }
 
-
 .main-nav {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
 .main-nav a {
-    color:rgb(60, 95, 96);
-    text-decoration: none;
+	color: rgb(60, 95, 96);
+	text-decoration: none;
+	margin-right: 5px;
 }
 
 .main-nav a:hover {
-    text-decoration: underline solid rgb(203, 167, 152) 3px;
+	text-decoration: underline solid rgb(203, 167, 152) 3px;
 }
 
-.profile-login{
-	display:flex;
-	align-items:center;
-	gap:30px;
+.profile-login {
+	display: flex;
+	align-items: center;
+	gap: 30px;
 }
 
 .profile-login button {
-  padding: 5px;
-  border: 1px solid rgb(60, 95, 96);
-  border-radius: 20px;
-  font-size: 15px;
-  background-color: transparent;
-  transition: box-shadow 0.3s; /* Add transition for smooth effect */
+	padding: 5px;
+	border: 1px solid rgb(60, 95, 96);
+	border-radius: 20px;
+	font-size: 15px;
+	background-color: transparent;
+	transition: box-shadow 0.3s; /* Add transition for smooth effect */
 }
 
 .profile-login button:hover {
-  box-shadow: 0 0 10px rgba(60, 95, 96, 0.3); /* Add shadow on hover */
-  border: 1px solid rgb(203, 167, 152);
-  color: rgb(203, 167, 152);
-  cursor: pointer;
+	box-shadow: 0 0 10px rgba(60, 95, 96, 0.3); /* Add shadow on hover */
+	border: 1px solid rgb(203, 167, 152);
+	color: rgb(203, 167, 152);
+	cursor: pointer;
 }
 
+.searchbar input[type=text] {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	border: 1px solid rgb(60, 95, 96);
+	color: rgb(60, 95, 96);
+	width: 250px;
+	height: 35px;
+	font-size: 15px;
+	padding-left: 10px;
+	background-color: transparent;
+}
 
-.searchbar input[type=text]{
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-     border-radius: 20px;
-     border: 1px solid rgb(60, 95, 96);
-     color: rgb(60, 95, 96);
-     width: 250px;
-     height: 35px;
-     font-size:15px;
-     padding-left: 10px;
-     background-color: transparent;
-    }
 .searchbar input[type=text]:focus {
-     outline: none;
-     border: 1px solid rgb(203, 167, 152);
+	outline: none;
+	border: 1px solid rgb(203, 167, 152);
 }
 
-.searchbar input[type=text]:active{
+.searchbar input[type=text]:active {
 	border: 1px solid rgb(203, 167, 152);
 }
 
 /*-----------------------Header Style end------------------*/
 
 /*-------------------------Main page style begin--------------*/
-
-.site-image{
+.site-image {
 	background-image: url("../images/website2.jpg");
-	height:100%;
-	width:100%;
+	height: 100%;
+	width: 100%;
 	background-size: cover;
 	display: flex;
 	align-items: center;
@@ -127,89 +126,85 @@ body{
 	margin-bottom: 50px;
 }
 
-.site-image h2{
-	color:  white;
+.site-image h2 {
+	color: white;
+}
 
-	}
-
-.center-img{
-	background-color:rgba(0,0,0,0.3);
+.center-img {
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 /*---------------Add new and Practice sections begin----------*/
-
-.add-new{
-	margin:auto;
-	text-align:center;
-	margin-bottom:100px;
+.add-new {
+	margin: auto;
+	text-align: center;
+	margin-bottom: 100px;
 	max-width: 1500px;
 }
 
-.add-new h2{
-	color:  rgb(203, 167, 152);
+.add-new h2 {
+	color: rgb(203, 167, 152);
 }
 
 .row {
-  width:100%;
-  margin: 5% auto; /* shorthand for top/bottom margin 5% and horizontal margin auto */
-  display: flex;
-  flex-direction: row;
-  justify-content: center; /* Center the items horizontally */
-  justify-content: space-between;
+	width: 100%;
+	margin: 5% auto;
+	/* shorthand for top/bottom margin 5% and horizontal margin auto */
+	display: flex;
+	flex-direction: row;
+	justify-content: center; /* Center the items horizontally */
+	justify-content: space-between;
 }
 
-
 .add-elem {
-    border-radius: 20px;
-    padding:5px 5px;
-    box-sizing: border-box;
-    transition: 0.5s;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative; /* Add position relative for positioning absolute child */
-	margin:10px;
+	border-radius: 20px;
+	padding: 5px 5px;
+	box-sizing: border-box;
+	transition: 0.5s;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	/* Add position relative for positioning absolute child */
+	margin: 10px;
 }
 
 .add-elem p {
-    display: none; /* Hide the paragraph by default */
-    position: absolute; /* Position the paragraph absolutely */
-    bottom: 0px; /* Adjust as needed */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-    transition: 0.5s; /* Transition effect */
-    color:transparent;
+	display: none; /* Hide the paragraph by default */
+	position: absolute; /* Position the paragraph absolutely */
+	bottom: 0px; /* Adjust as needed */
+	left: 50%; /* Center horizontally */
+	transform: translateX(-50%); /* Center horizontally */
+	transition: 0.5s; /* Transition effect */
+	color: transparent;
 }
 
-.add-elem:hover{
-	background-color:rgba(203, 167, 152,0.3);
-	box-shadow: 0 0 20px 0px rgba(203, 167, 152,0.2);
+.add-elem:hover {
+	background-color: rgba(203, 167, 152, 0.3);
+	box-shadow: 0 0 20px 0px rgba(203, 167, 152, 0.2);
 }
 
 .add-elem:hover p {
-    display: block; /* Display paragraph on hover */
-    bottom: 60px; /* Adjust as needed */
-    color:  rgb(203, 167, 152);
-    font-size:20px;
-    font-style: bold;
+	display: block; /* Display paragraph on hover */
+	bottom: 60px; /* Adjust as needed */
+	color: rgb(203, 167, 152);
+	font-size: 20px;
+	font-style: bold;
 }
 
+.add-elem i, .add-elem p {
+	display: inline-block; /* or inline */
+	vertical-align: middle; /* to vertically align them */
+}
 
-.add-elem i,
-    .add-elem p {
-        display: inline-block; /* or inline */
-        vertical-align: middle; /* to vertically align them */
-    }
-
-@media(max-width:1000px){
-	
-	.add-new{
-	max-width: 800px !important;
+@media ( max-width :1000px) {
+	.add-new {
+		max-width: 800px !important;
 	}
-	.row{
-	flex-direction: column;
-	width:80%;
+	.row {
+		flex-direction: column;
+		width: 80%;
 	}
 }
 
@@ -217,107 +212,104 @@ body{
 
 /*-------------------------Main page style end--------------*/
 
-
-
 /*-----------------------Add card page style start-------------*/
-
 .container {
-    height: 100vh; /* Set the height of the container to 100% of the viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	height: 100vh;
+	/* Set the height of the container to 100% of the viewport height */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.add-new-card{
-	margin:40px;
-	display:flex;
+.add-new-card {
+	margin: 40px;
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-.add-new-card p{
+.add-new-card p {
 	color: rgb(203, 167, 152);
 	font-size: 25px;
 	font-weight: bold;
 }
 
-.add-new-card-form label{
-	display:inline-block;
-	width:200px;
-	height:20px;
+.add-new-card-form label {
+	display: inline-block;
+	width: 200px;
+	height: 20px;
 }
 
 .add-new-card-form select {
-    background-color: transparent;
-    border: 2px solid rgba(60, 95, 96, 0.4);
-    padding: 10px 20px;
-    border-radius: 20px;
-    width: 350px;
-    height: 40px;
-    font-size: 15px;
-
-    /* For non-IE browsers */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-   
-    /* Custom arrow styles */
-    background-image: url('../images/dropdown-arrow.svg'); /* Replace 'path/to/arrow-icon.svg' with the actual path to your arrow icon */
-    background-position: right 15px center; /* Adjust the position of the arrow */
-    background-repeat: no-repeat;
-    background-color: white;
-   	color: rgb(60, 95, 96);
-    background-size: 20px 20px;
+	background-color: transparent;
+	border: 2px solid rgba(60, 95, 96, 0.4);
+	padding: 10px 20px;
+	border-radius: 20px;
+	width: 350px;
+	height: 40px;
+	font-size: 15px;
+	/* For non-IE browsers */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	/* Custom arrow styles */
+	background-image: url('../images/dropdown-arrow.svg');
+	/* Replace 'path/to/arrow-icon.svg' with the actual path to your arrow icon */
+	background-position: right 15px center;
+	/* Adjust the position of the arrow */
+	background-repeat: no-repeat;
+	background-color: white;
+	color: rgb(60, 95, 96);
+	background-size: 20px 20px;
 }
 
 .add-new-card-form select::-ms-expand {
-    display: none; /* Hide the default arrow in IE */
+	display: none; /* Hide the default arrow in IE */
 }
 
-
-.front, .back, .additional-imputs{
-	display:flex;
-	direction:row;
+.front, .back, .additional-imputs {
+	display: flex;
+	direction: row;
 	align-items: center;
 }
 
-.type, .course, .folder, .front, .back, .additional-imputs{
-	margin:20px;
+.type, .course, .folder, .front, .back, .additional-imputs {
+	margin: 20px;
 }
-
 
 #editableFront, #editableBack, #editableCorrect, #editableIncorrect {
-	font-size:15px;
-    border: 2px solid rgba(60, 95, 96, 0.4);
-    border-radius: 20px;
-	padding:10px 20px;
-	margin-left:3px;
-    min-height: 8px; /* Set a minimum height */
-    width:310px;
-    max-height: 500px; /* Set a maximum height */
-    overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+	font-size: 15px;
+	border: 2px solid rgba(60, 95, 96, 0.4);
+	border-radius: 20px;
+	padding: 10px 20px;
+	margin-left: 3px;
+	min-height: 8px; /* Set a minimum height */
+	width: 310px;
+	max-height: 500px; /* Set a maximum height */
+	overflow-y: auto;
+	/* Enable vertical scrolling if content exceeds max-height */
 }
 
-.add-new-card-form .add-button{
+.add-new-card-form .add-button {
 	text-align: center;
 }
 
-.add-new-card-form .add-button input[type=submit]{
-  padding: 5px;
-  border: 1px solid rgba(60, 95, 96, 0.4);
-  border-radius: 20px;
-  width:80px;
-  height:40px;
-  font-size: 15px;
-  background-color: transparent;
-  transition:0.3s; /* Add transition for smooth effect */
+.add-new-card-form .add-button input[type=submit] {
+	padding: 5px;
+	border: 1px solid rgba(60, 95, 96, 0.4);
+	border-radius: 20px;
+	width: 80px;
+	height: 40px;
+	font-size: 15px;
+	background-color: transparent;
+	transition: 0.3s; /* Add transition for smooth effect */
 }
 
 .add-new-card-form .add-button input[type=submit]:hover {
-  border: 1px solid rgb(203, 167, 152);
-  color: rgb(203, 167, 152); 
-  cursor: pointer;
+	border: 1px solid rgb(203, 167, 152);
+	color: rgb(203, 167, 152);
+	cursor: pointer;
 }
 
 /*----------------------Add card page style end--------------*/
@@ -325,178 +317,232 @@ body{
 /*------------------------Add course popup window*/
 /* Modal styling */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 500px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+	max-width: 500px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
 }
 
 .modal-content button {
-  padding: 5px;
-  margin-left: 200px;
-  margin-right: 200px;
-  border: 1px solid rgb(60, 95, 96);
-  border-radius: 20px;
-  font-size: 15px;
-  background-color: transparent;
-  transition: box-shadow 0.3s; /* Add transition for smooth effect */
+	padding: 5px;
+	margin-left: 200px;
+	margin-right: 200px;
+	border: 1px solid rgb(60, 95, 96);
+	border-radius: 20px;
+	font-size: 15px;
+	background-color: transparent;
+	transition: box-shadow 0.3s; /* Add transition for smooth effect */
 }
 
 .modal-content button:hover {
-  box-shadow: 0 0 10px rgba(60, 95, 96, 0.3); /* Add shadow on hover */
-  border: 1px solid rgb(203, 167, 152);
-  color: rgb(203, 167, 152);
-  cursor: pointer;
+	box-shadow: 0 0 10px rgba(60, 95, 96, 0.3); /* Add shadow on hover */
+	border: 1px solid rgb(203, 167, 152);
+	color: rgb(203, 167, 152);
+	cursor: pointer;
 }
 
 /* Close button */
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.close:hover, .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 /* Simple form styling */
 form {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 label, input {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
-#addCourseForm input[type=text]{
+#addCourseForm input[type=text] {
 	padding: 5px;
-	font-size:15px;
+	font-size: 15px;
 	border: 1px solid rgb(60, 95, 96);
-    border-radius: 20px;
+	border-radius: 20px;
 }
 
 /*--------------------------Add folder popup-------------------------*/
 /* Modal styling */
 .modalFolder {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content-folder {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 500px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+	max-width: 500px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
 }
 
 .modal-content-folder button {
-  padding: 5px;
-  margin-left: 200px;
-  margin-right: 200px;
-  border: 1px solid rgb(60, 95, 96);
-  border-radius: 20px;
-  font-size: 15px;
-  background-color: transparent;
-  transition: box-shadow 0.3s; /* Add transition for smooth effect */
+	padding: 5px;
+	margin-left: 200px;
+	margin-right: 200px;
+	border: 1px solid rgb(60, 95, 96);
+	border-radius: 20px;
+	font-size: 15px;
+	background-color: transparent;
+	transition: box-shadow 0.3s; /* Add transition for smooth effect */
 }
 
 .modal-content-folder button:hover {
-  box-shadow: 0 0 10px rgba(60, 95, 96, 0.3); /* Add shadow on hover */
-  border: 1px solid rgb(203, 167, 152);
-  color: rgb(203, 167, 152);
-  cursor: pointer;
+	box-shadow: 0 0 10px rgba(60, 95, 96, 0.3); /* Add shadow on hover */
+	border: 1px solid rgb(203, 167, 152);
+	color: rgb(203, 167, 152);
+	cursor: pointer;
 }
 
 /* Close button */
 .close-folder {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
 }
 
-.close-folder:hover,
-.close-folder:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.close-folder:hover, .close-folder:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 label, input {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
-#addFolderForm input[type=text]{
+#addFolderForm input[type=text] {
 	padding: 10px;
-	font-size:15px;
+	font-size: 15px;
 	border: 1px solid rgb(60, 95, 96);
-    border-radius: 20px;
+	border-radius: 20px;
 }
 
 .modal-content-folder select {
 	padding: 10px;
-	font-size:15px;
+	font-size: 15px;
 	border: 1px solid rgb(60, 95, 96);
-    border-radius: 20px;
+	border-radius: 20px;
 	background-color: transparent;
 	margin-bottom: 10px;
-
-    /* For non-IE browsers */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-   
-    /* Custom arrow styles */
-    background-image: url('../images/dropdown-arrow.svg'); /* Replace 'path/to/arrow-icon.svg' with the actual path to your arrow icon */
-    background-position: right 15px center; /* Adjust the position of the arrow */
-    background-repeat: no-repeat;
-    background-color: white;
-   	color: rgb(60, 95, 96);
-    background-size: 20px 20px;
+	/* For non-IE browsers */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	/* Custom arrow styles */
+	background-image: url('../images/dropdown-arrow.svg');
+	/* Replace 'path/to/arrow-icon.svg' with the actual path to your arrow icon */
+	background-position: right 15px center;
+	/* Adjust the position of the arrow */
+	background-repeat: no-repeat;
+	background-color: white;
+	color: rgb(60, 95, 96);
+	background-size: 20px 20px;
 }
 
 .modal-content-folder select::-ms-expand {
-    display: none; /* Hide the default arrow in IE */
+	display: none; /* Hide the default arrow in IE */
 }
 
 .courses-select {
 	background-color: white;
 }
 
+/*--------------------------library.jsp-----------------*/
+hr {
+	color: rgba(60, 95, 96, 0.4);
+}
+
+.all-courses {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px;
+}
+
+.course-operations {
+	display: flex; /* Use flexbox */
+	justify-content: space-between;
+	/* Distribute items along the main axis */
+	align-items: center; /* Center items vertically */
+	width: 400px;
+	padding: 10px 20px;
+	border:none;
+	border-bottom: 1px solid rgba(60, 95, 96, 0.4);
+}
+.course-operations button{
+	width: 60px;
+}
+
+.course-operations h3, button {
+	display: inline-block; /* This allows them to be on the same line */
+	vertical-align: middle; /* Align vertically if needed */
+}
+
+.course-operations button{
+	padding: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid rgb(60, 95, 96);
+	border-radius: 20px;
+	font-size: 15px;
+	background-color: transparent;
+	transition: box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+.course-operations button:hover {
+	box-shadow: 0 0 10px rgba(60, 95, 96, 0.3); /* Add shadow on hover */
+	border: 1px solid rgb(203, 167, 152);
+	color: rgb(203, 167, 152);
+	cursor: pointer;
+}
+
+.course-operations h3 {
+	margin-right: 40px;
+}
+
+.course-operations h3 a{
+	text-decoration: none;
+}

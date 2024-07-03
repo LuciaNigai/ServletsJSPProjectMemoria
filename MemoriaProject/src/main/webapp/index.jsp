@@ -108,9 +108,10 @@
 		<div class="modal-content-folder">
 			<span class="close-folder">&times;</span>
 			<form id="addFolderForm" action="add-folder" method="POST">
-				<input type="hidden" name="action" value="addCourse"> <label
-					for="course">Select course name:</label> <select name="courses"
-					id="courses">
+				<input type="hidden" name="action" value="addCourse"> 
+				<label
+					for="course">Select course name:</label> 
+					<select name="courses" id="courses">
 					<%if(session.getAttribute("courses")!=null){
 						List<String> courses = (ArrayList<String>)session.getAttribute("courses");
 						if(courses!=null){
@@ -119,14 +120,10 @@
 						%>
 					<option class="courses-select" value="<%= course %>"><%= course %></option>
 					<%} }
-							else{
-								%>
-								<option class="courses-select" value="Default">Default</option>
-					<%
-							}
+							
 								} %>
-				</select> <label for="coursename">Course name:</label> <input type="text"
-					id="coursename" name="coursename" required><br>
+				</select> <label for="Folder">Folder name:</label> <input type="text"
+					id="folder" name="folder" required><br>
 				<button type="submit">Submit</button>
 			</form>
 		</div>

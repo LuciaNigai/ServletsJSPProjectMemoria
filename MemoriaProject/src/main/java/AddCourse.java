@@ -52,6 +52,7 @@ public class AddCourse extends HttpServlet {
 				        }
 				        courses.add(course);
 				        session.setAttribute("courses", courses);
+				        
 				        session.setAttribute("error", "Course added");
 
 				        resp.sendRedirect("index.jsp");
@@ -60,7 +61,7 @@ public class AddCourse extends HttpServlet {
 				        resp.sendRedirect("index.jsp");
 				    }
 				} else {
-				    session.setAttribute("error", "No message returned from stored procedure");
+				    session.setAttribute("error", "Unknown error occured");
 				    resp.sendRedirect("index.jsp");
 				}
 
